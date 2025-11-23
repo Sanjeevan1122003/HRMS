@@ -12,7 +12,7 @@ dotenv.config({ quiet: true });
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: process.env.FRONT_END_URL, credentials: true }));
+app.use(cors({ origin: "https://hrms.sanjeevantech.com/", credentials: true }));
 
 app.use("/api/auth", authRoutes)
 
@@ -27,3 +27,4 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
